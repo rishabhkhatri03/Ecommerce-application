@@ -1,0 +1,16 @@
+{% autoescape off %}
+Hi {{ user.username }},
+
+Welcome to HEIRLOOM!
+
+Thank you for signing up. Please verify your account by clicking the link below:
+
+Activate your account: [http://{{ domain }}{% url 'activate' uidb64=uid token=token %}]
+
+If the above link doesn't work, you can copy and paste the URL into your web browser.
+
+Thank you for joining us!
+
+Best regards,  
+HEIRLOOM Team
+{% endautoescape %}
